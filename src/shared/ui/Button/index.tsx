@@ -9,7 +9,7 @@ export enum ButtonType {
 interface ButtonInterface {
   title: string;
   onPress: () => void;
-  type: ButtonType;
+  type?: ButtonType;
 }
 
 /**
@@ -24,8 +24,11 @@ const Button: FunctionComponent<ButtonInterface> = ({
   type = ButtonType.default,
 }) => {
   return (
-    <TouchableOpacity style={styles[type]} onPress={onPress}>
-      <Text>{title}</Text>
+    <TouchableOpacity
+      activeOpacity={0.7}
+      style={styles[type]}
+      onPress={onPress}>
+      <Text style={styles.title}>{title}</Text>
     </TouchableOpacity>
   );
 };

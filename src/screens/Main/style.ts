@@ -1,6 +1,6 @@
 import {ScaledSheet} from 'react-native-size-matters';
 import fonts from '@fonts';
-import colors from '../../shared/colors';
+import colors from '@colors';
 
 export default ScaledSheet.create({
   container: {
@@ -18,19 +18,30 @@ export default ScaledSheet.create({
     fontWeight: '400',
     fontSize: '22@vs',
   },
+  topIconContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  topIcon: {
+    width: '283@s',
+    height: '236@s',
+  },
   bottomContainer: {
     width: '100%',
-    height: '200@vs',
+    height: '177@vs',
     borderTopLeftRadius: '18@vs',
     borderTopRightRadius: '18@vs',
     alignItems: 'center',
-    paddingTop: '23@vs',
+    paddingVertical: '23@vs',
+    paddingHorizontal: '26@s',
+    justifyContent: 'space-between',
   },
   bottomTitle: {
-    fontFamily: fonts.regular,
+    fontFamily: fonts.bold,
     color: colors.white,
-    fontSize: '31@vs',
-    fontWeight: '800',
+    fontSize: '33@vs',
+    fontWeight: '900',
   },
   bottomTitleNormal: {
     fontWeight: '300',
