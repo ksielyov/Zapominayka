@@ -7,6 +7,7 @@ export default ScaledSheet.create({
     width: '100%',
     height: '100%',
   },
+  safeAreaContainer: {flex: 1},
   topContainer: {
     flex: 1,
   },
@@ -14,9 +15,11 @@ export default ScaledSheet.create({
     fontFamily: fonts.regular,
     color: colors.white,
     textAlign: 'center',
-    marginTop: '64@vs',
+    marginTop: '26@vs',
     fontWeight: '400',
     fontSize: '22@vs',
+    lineHeight: '28@vs',
+    letterSpacing: '0.7@s',
   },
   topIconContainer: {
     flex: 1,
@@ -24,8 +27,7 @@ export default ScaledSheet.create({
     alignItems: 'center',
   },
   topIcon: {
-    width: '283@s',
-    height: '236@s',
+    top: -20,
   },
   bottomContainer: {
     width: '100%',
