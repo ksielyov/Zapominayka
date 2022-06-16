@@ -12,6 +12,7 @@ module.exports = {
           '@ui': './src/shared/ui',
           '@icons': './src/shared/icons',
           '@hooks': './src/shared/lib/hooks',
+          '@images': './src/shared/assets/images',
         },
       },
     ],

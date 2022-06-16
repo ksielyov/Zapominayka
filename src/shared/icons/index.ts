@@ -1,2 +1,3 @@
-export * from './Brain';
-export * from './SearchIcon';
+export * from './brain';
+export * from './mask';
+export * from './searchIcon';

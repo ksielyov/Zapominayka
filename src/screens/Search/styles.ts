@@ -6,6 +6,7 @@ export default ScaledSheet.create({
   container: {
     width: '100%',
     height: '100%',
+    backgroundColor: colors.blackBright,
   },
   safeAreaContainer: {flex: 1},
   topContainer: {
@@ -55,5 +56,9 @@ export default ScaledSheet.create({
   },
   bottomTitleNormal: {
     fontWeight: '300',
+  },
+  scrollableItems: {
+    height: '100%',
+    width: '100%',
   },
 });

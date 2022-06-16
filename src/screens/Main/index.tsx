@@ -1,36 +1,23 @@
 import {Button} from '@ui';
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import {View, Text, ImageBackground} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import styles from './style';
 import {Brain} from '@icons';
-import RNBootsplash from 'react-native-bootsplash';
-import ReactNativeHapticFeedback from 'react-native-haptic-feedback';
-import {AppSafeArea} from '../../shared/ui/AppSafeArea';
+import {AppSafeArea} from '@ui';
 import {useNavigation} from '@react-navigation/native';
+import {useSplashScreen} from '@hooks';
 
 const Main = () => {
-  const [backgroundLoaded, setBackgroundLoaded] = useState(false);
   const navigation = useNavigation();
-  useEffect(() => {
-    if (!backgroundLoaded) {
-      return;
-    }
-
-    (async function () {
-      await RNBootsplash.hide({fade: true});
-      ReactNativeHapticFeedback.trigger('notificationSuccess', {
-        enableVibrateFallback: true,
-        ignoreAndroidSystemSettings: false,
-      });
-    })();
-  }, [backgroundLoaded]);
+  const [backgroundLoaded, setBackgroundLoaded] = useState(false);
+  useSplashScreen(backgroundLoaded);
 
   return (
     <ImageBackground
       style={styles.container}
       onLayout={() => setBackgroundLoaded(true)}
-      source={require('../../shared/assets/images/background/main.png')}>
+      source={require('@images/background/main.png')}>
       <AppSafeArea>
         <View style={styles.topContainer}>
           <Text style={styles.title}>
