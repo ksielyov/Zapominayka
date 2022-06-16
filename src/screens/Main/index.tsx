@@ -7,9 +7,11 @@ import {Brain} from '@icons';
 import RNBootsplash from 'react-native-bootsplash';
 import ReactNativeHapticFeedback from 'react-native-haptic-feedback';
 import {AppSafeArea} from '../../shared/ui/AppSafeArea';
+import {useNavigation} from '@react-navigation/native';
 
 const Main = () => {
   const [backgroundLoaded, setBackgroundLoaded] = useState(false);
+  const navigation = useNavigation();
   useEffect(() => {
     if (!backgroundLoaded) {
       return;
@@ -47,7 +49,13 @@ const Main = () => {
           <Text style={styles.bottomTitle}>
             Zапоминай<Text style={styles.bottomTitleNormal}>ка</Text>
           </Text>
-          <Button title={'Найти стих или автора'} onPress={() => {}} />
+          <Button
+            title={'Найти стих или автора'}
+            onPress={() =>
+              // @ts-ignore
+              navigation.navigate('Search')
+            }
+          />
         </LinearGradient>
       </AppSafeArea>
     </ImageBackground>

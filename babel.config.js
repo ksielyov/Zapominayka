@@ -11,6 +11,7 @@ module.exports = {
           '@colors': './src/shared/colors',
           '@ui': './src/shared/ui',
           '@icons': './src/shared/icons',
+          '@hooks': './src/shared/lib/hooks',
         },
       },
     ],
