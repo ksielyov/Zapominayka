@@ -6,10 +6,19 @@ export default ScaledSheet.create({
   container: {
     width: '100%',
     height: '100%',
+    backgroundColor: colors.blackBright,
   },
   safeAreaContainer: {flex: 1},
   topContainer: {
-    flex: 1,
+    alignItems: 'center',
+  },
+  searchTitle: {
+    fontFamily: fonts.regular,
+    color: colors.white,
+    textAlign: 'center',
+    fontWeight: '400',
+    fontSize: '17@vs',
+    marginBottom: '10.6@vs',
   },
   title: {
     fontFamily: fonts.regular,
@@ -47,5 +56,13 @@ export default ScaledSheet.create({
   },
   bottomTitleNormal: {
     fontWeight: '300',
+  },
+  scrollableItemsContentContainer: {
+    paddingBottom: '377@vs',
+  },
+  scrollableItems: {
+    height: '100%',
+    width: '100%',
+    marginTop: '6@vs',
   },
 });

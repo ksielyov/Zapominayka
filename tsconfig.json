@@ -39,10 +39,13 @@
     /* Specify the base directory to resolve non-relative module names. */
     /* Specify a set of entries that re-map imports to additional lookup locations. */
     "paths": {
+      "@screens/*": ["src/screens/*"],
       "@fonts": ["src/shared/assets/fonts"],
       "@colors": ["src/shared/colors"],
       "@ui": ["src/shared/ui"],
       "@icons": ["src/shared/icons"],
+      "@hooks": ["src/shared/lib/hooks"],
+      "@images/*": ["src/shared/assets/images/*"],
     },
     // "rootDirs": [],                                   /* Allow multiple folders to be treated as one when resolving modules. */
     // "typeRoots": [],                                  /* Specify multiple folders that act like `./node_modules/@types`. */
