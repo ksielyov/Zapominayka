@@ -57,8 +57,12 @@ export default ScaledSheet.create({
   bottomTitleNormal: {
     fontWeight: '300',
   },
+  scrollableItemsContentContainer: {
+    paddingBottom: '377@vs',
+  },
   scrollableItems: {
     height: '100%',
     width: '100%',
+    marginTop: '6@vs',
   },
 });

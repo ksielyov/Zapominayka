@@ -7,7 +7,14 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "ios-se": "react-native run-ios --simulator=\"iPhone SE\"",
+    "ios-8": "react-native run-ios --simulator=\"iPhone 8\"",
+    "ios-8-plus": "react-native run-ios --simulator=\"iPhone 8 Plus\"",
+    "ios-5": "react-native run-ios --simulator=\"iPhone 5s\"",
+    "ios-12-pro-max": "react-native run-ios --simulator=\"iPhone 12 Pro Max\"",
+    "ios-13-pro-max": "react-native run-ios --simulator=\"iPhone 13 Pro Max\"",
+    "ios-device": "react-native run-ios --device"
   },
   "dependencies": {
     "@react-navigation/native": "^6.0.10",

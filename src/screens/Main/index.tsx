@@ -28,7 +28,7 @@ const Main = () => {
           </View>
         </View>
         <LinearGradient
-          useAngle={true}
+          useAngle
           angle={-310}
           locations={[0.25, 0.77]}
           style={styles.bottomContainer}

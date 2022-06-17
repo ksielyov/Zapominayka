@@ -11,7 +11,7 @@ const App = () => {
       <NavigationContainer>
         <Fragment>
           <StatusBar
-            translucent={true}
+            translucent
             backgroundColor={'transparent'}
             barStyle={'light-content'}
           />

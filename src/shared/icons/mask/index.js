@@ -1,11 +1,12 @@
 import * as React from 'react';
 import Svg, {Defs, Path, Pattern, Image} from 'react-native-svg';
+import {verticalScale} from 'react-native-size-matters';
 
 function MaskImage(props) {
   return (
     <Svg
-      width={52}
-      height={52}
+      width={verticalScale(45)}
+      height={verticalScale(45)}
       viewBox="0 0 52 52"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

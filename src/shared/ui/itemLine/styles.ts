@@ -1,16 +1,14 @@
-import {ScaledSheet} from 'react-native-size-matters';
+import {scale, ScaledSheet} from 'react-native-size-matters';
 import colors from '@colors';
 import fonts from '@fonts';
 
 export default ScaledSheet.create({
   container: {
     width: '100%',
-    height: '68@vs',
+    height: '66@vs',
     justifyContent: 'space-between',
     alignItems: 'center',
     flexDirection: 'row',
-    borderTopColor: '#424242',
-    borderTopWidth: '1.3@vs',
     borderBottomColor: '#424242',
     borderBottomWidth: '1.3@vs',
   },
@@ -27,5 +25,18 @@ export default ScaledSheet.create({
     fontSize: '14.6@vs',
     fontFamily: fonts.regular,
     fontWeight: '400',
+    width: '100%',
+  },
+  likeContainer: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: scale(28),
+  },
+  likeCount: {
+    color: colors.white,
+    fontWeight: '700',
+    fontFamily: fonts.regular,
+    top: '-1@vs',
+    fontSize: '11.4@vs',
   },
 });

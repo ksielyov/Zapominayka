@@ -2,26 +2,50 @@ import React, {FunctionComponent} from 'react';
 import {View} from 'react-native';
 import styles from './styles';
 import {Text} from 'react-native';
-import {MaskImage} from '@icons';
+import {MaskImage, Like} from '@icons';
+import {scale, verticalScale} from 'react-native-size-matters';
+import {TouchableOpacity} from 'react-native-gesture-handler';
 
-interface ItemLineInterface {}
+interface ItemLineInterface {
+  title: string;
+  likeCount: number;
+  enabledTopBorder?: boolean;
+}
 
 /**
+ * @param title
+ * @param likeCount
+ * @param enabledTopBorder
  * @constructor
  */
-const ItemLine: FunctionComponent<ItemLineInterface> = ({}) => {
+const ItemLine: FunctionComponent<ItemLineInterface> = ({
+  title,
+  likeCount,
+  enabledTopBorder,
+}) => {
+  const containerStyles = [
+    styles.container,
+    enabledTopBorder
+      ? {
+          borderTopColor: '#424242',
+          borderTopWidth: verticalScale(1.3),
+        }
+      : undefined,
+  ];
+
   return (
-    <View style={styles.container}>
+    <TouchableOpacity style={containerStyles}>
       <View style={styles.left}>
         <MaskImage style={styles.image} />
         <Text style={styles.name} numberOfLines={2}>
-          Осень
+          {title}
         </Text>
       </View>
-      <View>
-        <Text>like</Text>
+      <View style={styles.likeContainer}>
+        <Like width={scale(28)} height={verticalScale(23)} />
+        <Text style={styles.likeCount}>{likeCount}</Text>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 
