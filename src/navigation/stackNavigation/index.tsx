@@ -22,4 +22,4 @@ const StackNavigation: FunctionComponent = () => {
   );
 };
 
-export default StackNavigation;
+export {StackNavigation};

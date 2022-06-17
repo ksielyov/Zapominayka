@@ -7,6 +7,7 @@ module.exports = {
         root: ['./src'],
         alias: {
           '@screens': './src/screens',
+          '@navigation': './src/navigation',
           '@fonts': './src/shared/assets/fonts',
           '@colors': './src/shared/colors',
           '@ui': './src/shared/ui',
