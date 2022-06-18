@@ -1,16 +1,7 @@
 import React, {FunctionComponent} from 'react';
 import {Text, TouchableOpacity} from 'react-native';
 import styles from './styles';
-
-export enum ButtonType {
-  default = 'default',
-}
-
-interface ButtonInterface {
-  title: string;
-  onPress: () => void;
-  type?: ButtonType;
-}
+import {ButtonInterface, ButtonType} from './lib';
 
 /**
  * @param title

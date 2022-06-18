@@ -5,12 +5,7 @@ import {Text} from 'react-native';
 import {MaskImage, Like} from '@icons';
 import {scale, verticalScale} from 'react-native-size-matters';
 import {TouchableOpacity} from 'react-native-gesture-handler';
-
-interface ItemLineInterface {
-  title: string;
-  likeCount: number;
-  enabledTopBorder?: boolean;
-}
+import {ItemLineInterface} from './lib';
 
 /**
  * @param title

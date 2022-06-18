@@ -2,14 +2,9 @@ import React, {FunctionComponent} from 'react';
 import {Text} from 'react-native';
 import styles from './styles';
 import {verticalScale} from 'react-native-size-matters';
+import {GrayTextInterface} from './lib';
 
 const defaultSize = verticalScale(16);
-
-interface GrayTextInterface {
-  size?: number;
-  top?: number;
-  bottom?: number;
-}
 
 /**
  * @param children

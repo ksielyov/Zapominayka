@@ -2,10 +2,11 @@ import React from 'react';
 import {FunctionComponent} from 'react';
 import {createStackNavigator, TransitionPresets} from '@react-navigation/stack';
 
-import Main from '@screens/Main';
-import Search from '@screens/Search';
+import Main from '@screens/main';
+import Search from '@screens/search';
+import {RootStackParamList} from './types';
 
-const Stack = createStackNavigator();
+const Stack = createStackNavigator<RootStackParamList>();
 
 const StackNavigation: FunctionComponent = () => {
   const screenOptions = {
