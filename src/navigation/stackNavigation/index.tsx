@@ -4,7 +4,7 @@ import {createStackNavigator, TransitionPresets} from '@react-navigation/stack';
 
 import Main from '@screens/main';
 import Search from '@screens/search';
-import {RootStackParamList} from './types';
+import {RootStackParamList} from './lib';
 
 const Stack = createStackNavigator<RootStackParamList>();
 
