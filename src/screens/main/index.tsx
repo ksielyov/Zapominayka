@@ -7,9 +7,10 @@ import {Brain} from '@icons';
 import {AppSafeArea} from '@ui';
 import {useNavigation} from '@react-navigation/native';
 import {useSplashScreen} from '@hooks';
+import {StackPropParamList} from '@navigation/lib';
 
 const Main = () => {
-  const navigation = useNavigation();
+  const navigation = useNavigation<StackPropParamList>();
   const [backgroundLoaded, setBackgroundLoaded] = useState(false);
   useSplashScreen(backgroundLoaded);
 
@@ -38,10 +39,7 @@ const Main = () => {
           </Text>
           <Button
             title={'Найти стих или автора'}
-            onPress={() =>
-              // @ts-ignore
-              navigation.navigate('Search')
-            }
+            onPress={() => navigation.navigate('Search')}
           />
         </LinearGradient>
       </AppSafeArea>

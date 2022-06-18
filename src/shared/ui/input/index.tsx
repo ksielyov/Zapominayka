@@ -2,20 +2,7 @@ import React, {FunctionComponent} from 'react';
 import {TextInput, View} from 'react-native';
 import styles from './styles';
 import colors from '@colors';
-
-export enum InputType {
-  default = 'default',
-}
-
-export enum VerticalAlign {
-  center = 'center',
-}
-
-interface InputInterface {
-  placeholder: string;
-  type?: InputType;
-  verticalAlign?: VerticalAlign;
-}
+import {InputInterface, InputType, VerticalAlign} from './lib';
 
 /**
  * @param placeholder
