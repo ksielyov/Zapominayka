@@ -41,6 +41,8 @@
     "@babel/preset-typescript": "^7.17.12",
     "@babel/runtime": "^7.12.5",
     "@react-native-community/eslint-config": "^2.0.0",
+    "@testing-library/jest-native": "^4.0.5",
+    "@testing-library/react-native": "^9.1.0",
     "@types/jest": "^28.1.2",
     "@types/react-native": "^0.67.3",
     "@types/react-test-renderer": "^17.0.1",
@@ -70,6 +72,7 @@
     ],
     "transformIgnorePatterns": [
       "node_modules/(?!@react-native|react-native)"
-    ]
+    ],
+    "setupFilesAfterEnv": ["@testing-library/jest-native/extend-expect"]
   }
 }
