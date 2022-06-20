@@ -37,7 +37,7 @@ const ItemLine: FunctionComponent<ItemLineInterface> = ({
         </Text>
       </View>
       <View style={styles.likeContainer}>
-        <Like width={scale(28)} height={verticalScale(23)} />
+        <Like width={scale(27)} height={verticalScale(22.67)} />
         <Text style={styles.likeCount}>{likeCount}</Text>
       </View>
     </TouchableOpacity>

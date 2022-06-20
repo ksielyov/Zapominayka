@@ -19,12 +19,18 @@ const Search = () => {
             <View style={styles.topContainer}>
               <SearchIcon />
               <Text style={styles.searchTitle}>Искать стих или автора</Text>
-              <Input placeholder={'Искать стих или автора'} />
+              <Input
+                placeholder={'Искать стих или автора'}
+                onChangeText={() => {}}
+              />
               <ScrollView
                 contentContainerStyle={styles.scrollableItemsContentContainer}
                 showsVerticalScrollIndicator={false}
                 style={styles.scrollableItems}>
-                <GrayText bottom={verticalScale(6)} top={verticalScale(12)}>
+                <GrayText
+                  size={verticalScale(15)}
+                  bottom={verticalScale(6)}
+                  top={verticalScale(12)}>
                   Популярные в этом месяце
                 </GrayText>
                 <ItemLine
