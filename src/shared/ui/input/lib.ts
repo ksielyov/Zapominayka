@@ -10,4 +10,6 @@ export interface InputInterface {
   placeholder: string;
   type?: InputType;
   verticalAlign?: VerticalAlign;
+  value?: string;
+  onChangeText: (value: string) => void;
 }

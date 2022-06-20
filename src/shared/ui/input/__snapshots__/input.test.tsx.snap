@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input should render correctly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#fff",
+      "borderRadius": 11.770588235294117,
+      "height": 86.31764705882352,
+      "width": "100%",
+    }
+  }
+>
+  <TextInput
+    placeholder="Input test"
+    placeholderTextColor="rgba(21,22,37,0.6)"
+    style={
+      Object {
+        "color": "#151625",
+        "fontSize": 26.68,
+        "height": "100%",
+        "paddingHorizontal": 30,
+        "width": "100%",
+      }
+    }
+    textAlignVertical="center"
+  />
+</View>
+`;
