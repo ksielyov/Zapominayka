@@ -12,6 +12,7 @@ exports[`Input should render correctly 1`] = `
   }
 >
   <TextInput
+    onChangeText={[Function]}
     placeholder="Input test"
     placeholderTextColor="rgba(21,22,37,0.6)"
     style={
