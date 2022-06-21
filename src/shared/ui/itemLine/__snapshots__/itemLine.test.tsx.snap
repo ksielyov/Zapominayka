@@ -4,7 +4,7 @@ exports[`itemLine should render correctly 1`] = `
 <View
   accessible={true}
   collapsable={false}
-  focusable={false}
+  focusable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
@@ -140,116 +140,13 @@ exports[`itemLine should render correctly 1`] = `
         Object {
           "color": "#fff",
           "fontFamily": "Roboto-Regular",
-          "fontSize": 26.28764705882353,
+          "fontSize": 27.072352941176472,
           "fontWeight": "400",
           "width": "100%",
         }
       }
     >
       ItemLine UI test
-    </Text>
-  </View>
-  <View
-    style={
-      Object {
-        "alignItems": "center",
-        "justifyContent": "center",
-        "width": 60,
-      }
-    }
-  >
-    <RNSVGSvgView
-      align="xMidYMid"
-      bbHeight={44.47320588235294}
-      bbWidth={57.857142857142854}
-      fill="none"
-      focusable={false}
-      height={44.47320588235294}
-      meetOrSlice={0}
-      minX={0}
-      minY={0}
-      style={
-        Array [
-          Object {
-            "backgroundColor": "transparent",
-            "borderWidth": 0,
-          },
-          Object {
-            "flex": 0,
-            "height": 44,
-            "width": 57,
-          },
-        ]
-      }
-      vbHeight={185}
-      vbWidth={280}
-      width={57.857142857142854}
-    >
-      <RNSVGGroup
-        fill={null}
-        propList={
-          Array [
-            "fill",
-          ]
-        }
-      >
-        <RNSVGGroup
-          clipRule={0}
-          fillRule={0}
-          propList={
-            Array [
-              "fillRule",
-            ]
-          }
-        >
-          <RNSVGPath
-            d="M135.843 184c-2.048 0-3.408 0-48.577-24.844-45.17-24.845-45.95-26.048-47.06-27.833-.995-1.594-2.024-18.562-2.19-50.138-.174-32.174 1.07-33.834 2.488-35.76.995-1.32 2.115-2.822 25.35-14.111C89.09 20.024 91.263 20 92.838 20c2.762 0 5.25 1.063 27.556 13.281 5.556 3.047 12.796 7.014 16.246 8.724 3.607-1.718 11.319-5.81 17.231-8.906 22.117-11.671 24.356-12.618 26.976-12.618 1.924 0 3.45 0 27.365 12.452 3.765 1.95 22.647 11.77 24.604 13.405 2.729 2.275 2.903 4.98 3.093 14.203.125 6.2.1 13.987.05 19.432-.091 10.443-.348 43.63-1.003 45.93-.829 2.764-2.579 3.893-6.891 6.599-2.488 1.552-5.996 3.685-10.49 6.358-8.21 4.881-19.372 11.381-31.429 18.262-11.817 6.815-23.12 13.157-31.719 17.963C138.356 184 137.842 184 135.843 184z"
-            fill={
-              Array [
-                1,
-                "paint0_linear_0_1583",
-              ]
-            }
-            propList={
-              Array [
-                "fill",
-              ]
-            }
-          />
-        </RNSVGGroup>
-        <RNSVGDefs>
-          <RNSVGLinearGradient
-            gradient={
-              Array [
-                0,
-                -16120,
-                1,
-                -2937041,
-              ]
-            }
-            gradientTransform={null}
-            gradientUnits={1}
-            name="paint0_linear_0_1583"
-            x1={624.6}
-            x2={426.828}
-            y1={359.635}
-            y2={-77.8139}
-          />
-        </RNSVGDefs>
-      </RNSVGGroup>
-    </RNSVGSvgView>
-    <Text
-      style={
-        Object {
-          "color": "#fff",
-          "fontFamily": "Roboto-Regular",
-          "fontSize": 20.990882352941174,
-          "fontWeight": "700",
-          "top": -1.9617647058823529,
-        }
-      }
-    >
-      324
     </Text>
   </View>
 </View>

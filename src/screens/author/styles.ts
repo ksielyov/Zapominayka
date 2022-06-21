@@ -11,32 +11,24 @@ export default ScaledSheet.create({
   safeAreaContainer: {flex: 1},
   topContainer: {
     alignItems: 'center',
+    width: '100%',
+    height: '167@vs',
   },
-  searchTitle: {
-    fontFamily: fonts.regular,
+  authorImage: {
+    width: '100%',
+    height: '100%',
+  },
+  lastName: {
     color: colors.white,
-    textAlign: 'center',
-    fontWeight: '400',
+    fontSize: '32@vs',
+    fontFamily: fonts.bold,
+    fontWeight: '900',
+  },
+  patronymic: {
+    color: colors.white,
     fontSize: '17@vs',
-    marginBottom: '10.6@vs',
-  },
-  title: {
-    fontFamily: fonts.regular,
-    color: colors.white,
-    textAlign: 'center',
-    marginTop: '26@vs',
+    fontFamily: fonts.bold,
     fontWeight: '400',
-    fontSize: '22@vs',
-    lineHeight: '28@vs',
-    letterSpacing: '0.7@s',
-  },
-  topIconContainer: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  topIcon: {
-    top: -20,
   },
   bottomContainer: {
     width: '100%',

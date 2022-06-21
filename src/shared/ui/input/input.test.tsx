@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import {Input} from './index';
+import {Input} from '@ui';
 import {fireEvent, render} from '@testing-library/react-native';
 
 test('Input should render correctly', () => {
