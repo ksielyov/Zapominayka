@@ -3,10 +3,17 @@
 exports[`container should render correctly 1`] = `
 <View
   style={
-    Object {
-      "paddingHorizontal": 34.285714285714285,
-      "width": "100%",
-    }
+    Array [
+      Object {
+        "paddingHorizontal": 34.285714285714285,
+        "width": "100%",
+      },
+      Object {
+        "marginTop": undefined,
+        "position": undefined,
+        "zIndex": undefined,
+      },
+    ]
   }
 >
   <View />

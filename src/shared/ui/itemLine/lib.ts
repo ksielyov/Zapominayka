@@ -3,4 +3,6 @@ export interface ItemLineInterface {
   likeCount: number;
   enabledTopBorder?: boolean;
   imageSource: string;
+  onPress: () => void;
+  likeMode?: true;
 }

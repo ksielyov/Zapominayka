@@ -1,4 +1,4 @@
-import {scale, ScaledSheet} from 'react-native-size-matters';
+import {ScaledSheet} from 'react-native-size-matters';
 import colors from '@colors';
 import fonts from '@fonts';
 
@@ -22,7 +22,7 @@ export default ScaledSheet.create({
   },
   name: {
     color: colors.white,
-    fontSize: '13.4@vs',
+    fontSize: '13.8@vs',
     fontFamily: fonts.regular,
     fontWeight: '400',
     width: '100%',

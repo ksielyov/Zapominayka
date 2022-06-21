@@ -2,9 +2,8 @@ import React from 'react';
 import {FunctionComponent} from 'react';
 import {createStackNavigator, TransitionPresets} from '@react-navigation/stack';
 
-import Main from '@screens/main';
-import Search from '@screens/search';
 import {RootStackParamList} from './lib';
+import {screens} from '@navigation/stackNavigation/screens';
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -17,8 +16,9 @@ const StackNavigation: FunctionComponent = () => {
 
   return (
     <Stack.Navigator screenOptions={screenOptions}>
-      <Stack.Screen name="Home" component={Main} />
-      <Stack.Screen name="Search" component={Search} />
+      {screens.map(({screen, component}) => (
+        <Stack.Screen key={screen} name={screen} component={component} />
+      ))}
     </Stack.Navigator>
   );
 };

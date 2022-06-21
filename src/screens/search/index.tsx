@@ -5,9 +5,12 @@ import {SearchIcon} from '@icons';
 import {AppSafeArea, Container, GrayText, Input, ItemLine} from '@ui';
 import {verticalScale} from 'react-native-size-matters';
 import {TouchableWithoutFeedback} from 'react-native-gesture-handler';
+import {useNavigation} from '@react-navigation/native';
+import {StackPropParamList} from '@navigation/lib';
 
 const Search = () => {
   const dismissKeyboard = () => Keyboard.dismiss();
+  const navigation = useNavigation<StackPropParamList>();
 
   return (
     <ImageBackground
@@ -37,6 +40,8 @@ const Search = () => {
                   title={'Я памятник себе воздвиг нерукотворный'}
                   likeCount={226}
                   enabledTopBorder
+                  likeMode
+                  onPress={() => navigation.navigate('Author')}
                 />
               </ScrollView>
             </View>
@@ -47,4 +52,4 @@ const Search = () => {
   );
 };
 
-export default Search;
+export {Search};

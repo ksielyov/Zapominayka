@@ -11,6 +11,8 @@ import {ItemLineInterface} from './lib';
  * @param likeCount
  * @param enabledTopBorder
  * @param imageSource
+ * @param onPress
+ * @param likeMode
  * @constructor
  */
 const ItemLine: FunctionComponent<ItemLineInterface> = ({
@@ -18,6 +20,8 @@ const ItemLine: FunctionComponent<ItemLineInterface> = ({
   likeCount,
   enabledTopBorder,
   imageSource,
+  onPress,
+  likeMode,
 }) => {
   const containerStyles = [
     styles.container,
@@ -30,17 +34,19 @@ const ItemLine: FunctionComponent<ItemLineInterface> = ({
   ];
 
   return (
-    <TouchableOpacity style={containerStyles}>
+    <TouchableOpacity onPress={onPress} style={containerStyles}>
       <View style={styles.left}>
         <MaskImage imageSource={imageSource} style={styles.image} />
         <Text style={styles.name} numberOfLines={2}>
           {title}
         </Text>
       </View>
-      <View style={styles.likeContainer}>
-        <Like width={scale(27)} height={verticalScale(22.67)} />
-        <Text style={styles.likeCount}>{likeCount}</Text>
-      </View>
+      {likeMode ? (
+        <View style={styles.likeContainer}>
+          <Like width={scale(27)} height={verticalScale(22.67)} />
+          <Text style={styles.likeCount}>{likeCount}</Text>
+        </View>
+      ) : null}
     </TouchableOpacity>
   );
 };
