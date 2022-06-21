@@ -77,7 +77,8 @@
       "@testing-library/jest-native/extend-expect"
     ],
     "setupFiles": [
-      "./jestSetup.js"
+      "./jestSetup.js",
+      "./node_modules/react-native-gesture-handler/jestSetup.js"
     ]
   }
 }

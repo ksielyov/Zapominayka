@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`container should render correctly 1`] = `
+<View
+  style={
+    Object {
+      "paddingHorizontal": 34.285714285714285,
+      "width": "100%",
+    }
+  }
+>
+  <View />
+</View>
+`;
