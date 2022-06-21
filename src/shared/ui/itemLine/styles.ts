@@ -22,7 +22,7 @@ export default ScaledSheet.create({
   },
   name: {
     color: colors.white,
-    fontSize: '14.6@vs',
+    fontSize: '13.4@vs',
     fontFamily: fonts.regular,
     fontWeight: '400',
     width: '100%',
@@ -30,13 +30,13 @@ export default ScaledSheet.create({
   likeContainer: {
     justifyContent: 'center',
     alignItems: 'center',
-    width: scale(28),
+    width: '28@s',
   },
   likeCount: {
     color: colors.white,
     fontWeight: '700',
     fontFamily: fonts.regular,
     top: '-1@vs',
-    fontSize: '11.4@vs',
+    fontSize: '10.7@vs',
   },
 });

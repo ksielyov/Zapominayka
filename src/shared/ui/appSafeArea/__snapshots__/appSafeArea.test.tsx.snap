@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`appSafeArea should render correctly 1`] = `
+<View
+  style={
+    Object {
+      "height": "100%",
+      "paddingTop": 0,
+      "width": "100%",
+    }
+  }
+>
+  <View />
+</View>
+`;

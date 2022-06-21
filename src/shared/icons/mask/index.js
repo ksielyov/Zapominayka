@@ -2,7 +2,7 @@ import * as React from 'react';
 import Svg, {Defs, Path, Pattern, Image} from 'react-native-svg';
 import {verticalScale} from 'react-native-size-matters';
 
-function MaskImage(props) {
+function MaskImage({imageSource, ...props}) {
   return (
     <Svg
       width={verticalScale(45)}
@@ -17,13 +17,7 @@ function MaskImage(props) {
           patternUnits="userSpaceOnUse"
           width="52"
           height="52">
-          <Image
-            xlinkHref="https://moreulybok.ru/wp-content/uploads/2021/05/aleksandr-pushkin7.jpg"
-            x="0"
-            y="0"
-            width="52"
-            height="52"
-          />
+          <Image xlinkHref={imageSource} x="0" y="0" width="52" height="52" />
         </Pattern>
       </Defs>
       <Path

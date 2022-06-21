@@ -4,7 +4,7 @@ import styles from './styles';
 import {verticalScale} from 'react-native-size-matters';
 import {GrayTextInterface} from './lib';
 
-const defaultSize = verticalScale(16);
+const defaultSize = verticalScale(15);
 
 /**
  * @param children

@@ -19,7 +19,10 @@ const Search = () => {
             <View style={styles.topContainer}>
               <SearchIcon />
               <Text style={styles.searchTitle}>Искать стих или автора</Text>
-              <Input placeholder={'Искать стих или автора'} />
+              <Input
+                placeholder={'Искать стих или автора'}
+                onChangeText={() => {}}
+              />
               <ScrollView
                 contentContainerStyle={styles.scrollableItemsContentContainer}
                 showsVerticalScrollIndicator={false}
@@ -28,6 +31,9 @@ const Search = () => {
                   Популярные в этом месяце
                 </GrayText>
                 <ItemLine
+                  imageSource={
+                    'https://moreulybok.ru/wp-content/uploads/2021/05/aleksandr-pushkin7.jpg'
+                  }
                   title={'Я памятник себе воздвиг нерукотворный'}
                   likeCount={226}
                   enabledTopBorder

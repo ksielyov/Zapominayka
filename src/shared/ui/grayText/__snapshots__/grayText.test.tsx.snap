@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`text should render correctly 1`] = `
+<Text
+  style={
+    Array [
+      Object {
+        "color": "#fff",
+        "fontFamily": "Roboto-Regular",
+        "fontWeight": "400",
+        "opacity": 0.5,
+      },
+      Object {
+        "fontSize": 29.426470588235293,
+        "marginBottom": undefined,
+        "marginTop": undefined,
+      },
+    ]
+  }
+>
+  test
+</Text>
+`;
