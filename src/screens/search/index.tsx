@@ -27,10 +27,7 @@ const Search = () => {
                 contentContainerStyle={styles.scrollableItemsContentContainer}
                 showsVerticalScrollIndicator={false}
                 style={styles.scrollableItems}>
-                <GrayText
-                  size={verticalScale(15)}
-                  bottom={verticalScale(6)}
-                  top={verticalScale(12)}>
+                <GrayText bottom={verticalScale(6)} top={verticalScale(12)}>
                   Популярные в этом месяце
                 </GrayText>
                 <ItemLine
