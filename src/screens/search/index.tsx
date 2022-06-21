@@ -31,6 +31,9 @@ const Search = () => {
                   Популярные в этом месяце
                 </GrayText>
                 <ItemLine
+                  imageSource={
+                    'https://moreulybok.ru/wp-content/uploads/2021/05/aleksandr-pushkin7.jpg'
+                  }
                   title={'Я памятник себе воздвиг нерукотворный'}
                   likeCount={226}
                   enabledTopBorder

@@ -7,6 +7,7 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
+    "test-new-snap": "jest --updateSnapshot",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "ios-se": "react-native run-ios --simulator=\"iPhone SE\"",
     "ios-8": "react-native run-ios --simulator=\"iPhone 8\"",

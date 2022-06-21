@@ -1,22 +1,23 @@
 import React, {FunctionComponent} from 'react';
 import {View} from 'react-native';
 import styles from './styles';
-import {Text} from 'react-native';
+import {Text, TouchableOpacity} from 'react-native';
 import {MaskImage, Like} from '@icons';
 import {scale, verticalScale} from 'react-native-size-matters';
-import {TouchableOpacity} from 'react-native-gesture-handler';
 import {ItemLineInterface} from './lib';
 
 /**
  * @param title
  * @param likeCount
  * @param enabledTopBorder
+ * @param imageSource
  * @constructor
  */
 const ItemLine: FunctionComponent<ItemLineInterface> = ({
   title,
   likeCount,
   enabledTopBorder,
+  imageSource,
 }) => {
   const containerStyles = [
     styles.container,
@@ -31,7 +32,7 @@ const ItemLine: FunctionComponent<ItemLineInterface> = ({
   return (
     <TouchableOpacity style={containerStyles}>
       <View style={styles.left}>
-        <MaskImage style={styles.image} />
+        <MaskImage imageSource={imageSource} style={styles.image} />
         <Text style={styles.name} numberOfLines={2}>
           {title}
         </Text>
