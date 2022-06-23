@@ -3,7 +3,7 @@ import {FunctionComponent} from 'react';
 import {createStackNavigator, TransitionPresets} from '@react-navigation/stack';
 
 import {RootStackParamList} from './lib';
-import {screens} from '@navigation/stackNavigation/screens';
+import {screens} from './screens';
 
 const Stack = createStackNavigator<RootStackParamList>();
 
