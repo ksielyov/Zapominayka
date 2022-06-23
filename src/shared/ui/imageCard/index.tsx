@@ -10,6 +10,7 @@ import {RotatedPreloader} from '@icons';
  * @param bottom
  * @param imageSource
  * @param onImageLoad
+ * @param testID
  * @constructor
  */
 const ImageCard: FunctionComponent<ImageCardInterface> = ({
@@ -17,6 +18,7 @@ const ImageCard: FunctionComponent<ImageCardInterface> = ({
   bottom,
   imageSource,
   onImageLoad,
+  testID,
 }) => {
   const [imageLoaded, setImageLoaded] = useState(false);
   const containerStyles = [styles.container, {marginBottom: bottom}];
@@ -33,7 +35,12 @@ const ImageCard: FunctionComponent<ImageCardInterface> = ({
       <View style={styles.indexContainer}>
         <Text style={styles.index}>{index}</Text>
       </View>
-      <FastImage style={styles.image} onLoadEnd={onLoadEnd} source={source} />
+      <FastImage
+        testID={testID}
+        style={styles.image}
+        onLoadEnd={onLoadEnd}
+        source={source}
+      />
       <View style={styles.imageContainer}>
         {!imageLoaded ? <RotatedPreloader /> : null}
       </View>

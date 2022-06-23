@@ -3,4 +3,5 @@ export interface ImageCardInterface {
   index: number;
   imageSource: string;
   onImageLoad?: () => void;
+  testID?: string;
 }
