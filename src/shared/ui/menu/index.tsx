@@ -1,14 +1,21 @@
 import React, {FunctionComponent} from 'react';
 import {View} from 'react-native';
 import styles from './styles';
-import {LikeButton} from '@icons';
+import {MaskedButton} from '@ui';
+import {LikeButtonComponent, MenuButtonComponent} from '@icons';
+import {verticalScale} from 'react-native-size-matters';
 
 const Menu: FunctionComponent = () => {
-  const containerStyles = [styles.container];
+  const iconBottomMargin = verticalScale(9);
 
   return (
-    <View style={containerStyles}>
-      <LikeButton />
+    <View style={styles.container}>
+      <MaskedButton bottom={iconBottomMargin}>
+        <LikeButtonComponent />
+      </MaskedButton>
+      <MaskedButton>
+        <MenuButtonComponent />
+      </MaskedButton>
     </View>
   );
 };

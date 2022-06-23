@@ -2,7 +2,7 @@ import * as React from 'react';
 import Svg, {Defs, Path, Pattern, Image} from 'react-native-svg';
 import {verticalScale} from 'react-native-size-matters';
 
-function MaskImage({imageSource, ...props}) {
+function MaskedImage({imageSource, ...props}) {
   return (
     <Svg
       width={verticalScale(45)}
@@ -28,4 +28,4 @@ function MaskImage({imageSource, ...props}) {
   );
 }
 
-export {MaskImage};
+export {MaskedImage};

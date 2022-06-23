@@ -2,7 +2,8 @@ import React, {FunctionComponent} from 'react';
 import {View} from 'react-native';
 import styles from './styles';
 import {Text, TouchableOpacity} from 'react-native';
-import {MaskImage, Like} from '@icons';
+import {Like} from '@icons';
+import {MaskedImage} from '@ui';
 import {scale, verticalScale} from 'react-native-size-matters';
 import {ItemLineInterface} from './lib';
 
@@ -36,7 +37,7 @@ const ItemLine: FunctionComponent<ItemLineInterface> = ({
   return (
     <TouchableOpacity onPress={onPress} style={containerStyles}>
       <View style={styles.left}>
-        <MaskImage imageSource={imageSource} style={styles.image} />
+        <MaskedImage imageSource={imageSource} style={styles.image} />
         <Text style={styles.name} numberOfLines={2}>
           {title}
         </Text>

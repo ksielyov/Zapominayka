@@ -13,6 +13,7 @@ export default ScaledSheet.create({
     alignItems: 'center',
     width: '100%',
     height: '167@vs',
+    backgroundColor: '#EB463E',
   },
   authorImage: {
     width: '100%',
