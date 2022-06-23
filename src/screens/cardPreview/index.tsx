@@ -27,7 +27,7 @@ const CardPreview = () => {
             <ImageCard
               index={2}
               imageSource={
-                'https://www.campology.ca/images/survival/survival_ice.jpg'
+                'https://priioajn.files.wordpress.com/2019/08/landscape-2459981.jpg?w=1200'
               }
               bottom={verticalScale(10)}
             />
