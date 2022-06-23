@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, ScrollView, Text} from 'react-native';
 import styles from './styles';
-import {Container, ItemLine} from '@ui';
+import {Container, ItemLine, Menu} from '@ui';
 import FastImage from 'react-native-fast-image';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import {verticalScale} from 'react-native-size-matters';
@@ -12,6 +12,7 @@ const Author = () => {
 
   return (
     <View style={styles.container}>
+      <Menu />
       <View style={styles.topContainer}>
         <FastImage
           source={{

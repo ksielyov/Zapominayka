@@ -1,14 +1,15 @@
 import React, {FunctionComponent} from 'react';
 import {View} from 'react-native';
 import styles from './styles';
-import {LikeButton} from '@icons';
+import {MaskedButton} from '@ui';
+import {ShareButtonComponent} from '@icons';
 
 const Menu: FunctionComponent = () => {
-  const containerStyles = [styles.container];
-
   return (
-    <View style={containerStyles}>
-      <LikeButton />
+    <View style={styles.container}>
+      <MaskedButton>
+        <ShareButtonComponent />
+      </MaskedButton>
     </View>
   );
 };
