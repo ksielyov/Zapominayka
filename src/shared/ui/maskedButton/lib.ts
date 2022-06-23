@@ -1,1 +1,3 @@
-export interface MaskedButtonInterface {}
+export interface MaskedButtonInterface {
+  bottom?: number;
+}

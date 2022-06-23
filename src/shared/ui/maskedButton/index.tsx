@@ -8,11 +8,16 @@ import styles from './styles';
 
 /**
  * @param children
+ * @param bottom
  * @constructor
  */
-const MaskedButton: FunctionComponent<MaskedButtonInterface> = ({children}) => {
+const MaskedButton: FunctionComponent<MaskedButtonInterface> = ({
+  children,
+  bottom,
+}) => {
+  const containerStyles = [styles.container, {marginBottom: bottom}];
   return (
-    <TouchableOpacity style={styles.container}>
+    <TouchableOpacity style={containerStyles}>
       <View style={styles.iconBackground} />
       <Svg
         width={verticalScale(46)}
@@ -26,7 +31,7 @@ const MaskedButton: FunctionComponent<MaskedButtonInterface> = ({children}) => {
           fill="#675CFE"
         />
       </Svg>
-      {children}
+      <View style={styles.childrenIconContainer}>{children}</View>
     </TouchableOpacity>
   );
 };

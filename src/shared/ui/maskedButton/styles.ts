@@ -9,4 +9,11 @@ export default ScaledSheet.create({
     position: 'absolute',
     borderRadius: verticalScale(9),
   },
+  childrenIconContainer: {
+    position: 'absolute',
+    zIndex: 2,
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
 });
