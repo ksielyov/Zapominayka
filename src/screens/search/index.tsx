@@ -15,7 +15,7 @@ const Search = () => {
   return (
     <ImageBackground
       style={styles.container}
-      source={require('../../shared/assets/images/background/search.png')}>
+      source={require('@images/background/gray.png')}>
       <AppSafeArea>
         <TouchableWithoutFeedback onPress={dismissKeyboard}>
           <Container>

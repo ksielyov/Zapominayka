@@ -5,10 +5,15 @@ import {Container, ItemLine, Menu} from '@ui';
 import FastImage from 'react-native-fast-image';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import {verticalScale} from 'react-native-size-matters';
+import {useNavigation} from '@react-navigation/native';
+import {StackPropParamList} from '@navigation/lib';
 
 const Author = () => {
   const {top} = useSafeAreaInsets();
+  const navigation = useNavigation<StackPropParamList>();
+
   const topContainerInnerMarginTop = top + verticalScale(4);
+  const cardItemPress = () => navigation.navigate('CardPreview');
 
   return (
     <View style={styles.container}>
@@ -36,7 +41,7 @@ const Author = () => {
             }
             title={'Я памятник себе воздвиг нерукотворный'}
             likeCount={123}
-            onPress={() => {}}
+            onPress={cardItemPress}
           />
           <ItemLine
             imageSource={
@@ -44,7 +49,7 @@ const Author = () => {
             }
             title={'Пушкин Александр Сергеевич'}
             likeCount={226}
-            onPress={() => {}}
+            onPress={cardItemPress}
           />
           <ItemLine
             imageSource={
@@ -52,7 +57,7 @@ const Author = () => {
             }
             title={'Лучезарная осень'}
             likeCount={212}
-            onPress={() => {}}
+            onPress={cardItemPress}
           />
         </ScrollView>
       </Container>

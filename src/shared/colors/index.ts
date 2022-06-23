@@ -5,4 +5,5 @@ export default {
   inputPlaceholder: 'rgba(21,22,37,0.6)',
   input: '#151625',
   blackBright: '#272727',
+  preloadingBright: '#424242',
 };
