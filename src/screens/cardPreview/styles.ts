@@ -1,11 +1,14 @@
 import {ScaledSheet} from 'react-native-size-matters';
 import fonts from '@fonts';
 import colors from '@colors';
+import {Dimensions} from 'react-native';
+
+const {height} = Dimensions.get('window');
 
 export default ScaledSheet.create({
   container: {
     width: '100%',
-    height: '100%',
+    height,
     backgroundColor: colors.blackBright,
     paddingTop: '10@vs',
   },

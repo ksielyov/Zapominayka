@@ -4,4 +4,5 @@ export interface ImageCardInterface {
   imageSource: string;
   onImageLoad?: () => void;
   testID?: string;
+  onPress?: () => void;
 }

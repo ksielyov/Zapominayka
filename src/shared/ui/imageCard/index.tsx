@@ -11,6 +11,7 @@ import {RotatedPreloader} from '@icons';
  * @param imageSource
  * @param onImageLoad
  * @param testID
+ * @param onPress
  * @constructor
  */
 const ImageCard: FunctionComponent<ImageCardInterface> = ({
@@ -19,6 +20,7 @@ const ImageCard: FunctionComponent<ImageCardInterface> = ({
   imageSource,
   onImageLoad,
   testID,
+  onPress,
 }) => {
   const [imageLoaded, setImageLoaded] = useState(false);
   const containerStyles = [styles.container, {marginBottom: bottom}];
@@ -31,7 +33,10 @@ const ImageCard: FunctionComponent<ImageCardInterface> = ({
   };
 
   return (
-    <TouchableOpacity activeOpacity={0.55} style={containerStyles}>
+    <TouchableOpacity
+      onPress={onPress}
+      activeOpacity={0.55}
+      style={containerStyles}>
       <View style={styles.indexContainer}>
         <Text style={styles.index}>{index}</Text>
       </View>
