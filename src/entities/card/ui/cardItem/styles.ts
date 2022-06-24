@@ -25,7 +25,7 @@ export default ScaledSheet.create({
   },
   numericContainer: {
     width: '36@s',
-    height: '29@vs',
+    height: '27@vs',
     borderTopRightRadius: '8@vs',
     borderTopLeftRadius: '8@vs',
     justifyContent: 'center',

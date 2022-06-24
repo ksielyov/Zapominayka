@@ -3,10 +3,16 @@ import {Text, View} from 'react-native';
 import FastImage from 'react-native-fast-image';
 import {Container} from '@ui';
 import styles from './styles';
-import {CardItemInterface} from './lib';
+import {CardItemInterface} from '../../lib';
 
+/**
+ * @param index
+ * @param text
+ * @param imageSource
+ * @constructor
+ */
 const CardItem: FunctionComponent<CardItemInterface> = ({
-  numeric,
+  index,
   text,
   imageSource,
 }) => (
@@ -15,7 +21,7 @@ const CardItem: FunctionComponent<CardItemInterface> = ({
       <FastImage style={styles.cardImage} source={{uri: imageSource}} />
       <Container bottom={-1} absolute>
         <View style={styles.numericContainer}>
-          <Text style={styles.numericText}>{numeric}</Text>
+          <Text style={styles.numericText}>{index}</Text>
         </View>
       </Container>
     </View>

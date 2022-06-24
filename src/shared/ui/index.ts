@@ -8,3 +8,5 @@ export * from './itemLine';
 export * from './maskedButton';
 export * from './maskedImage';
 export * from './menu';
+
+export * from './lib';
