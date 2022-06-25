@@ -20,22 +20,22 @@ const text = `Полюбил бы я зиму,
 const CardSwiper: FunctionComponent<
   NativeStackScreenProps<RootStackParamList, 'Card'>
 > = ({route}) => {
-  const [isReady, setIsReady] = useState(false);
-  const [currentPage, setCurrentPage] = useState(0);
-
-  const viewabilityConfig = {itemVisiblePercentThreshold: 70};
-  const swiper = useRef<FlatList>(null);
-
-  const dots = cards.map(item => item.key - 1);
   const {key} = route.params;
+  const dots = cards.map(item => item.key - 1);
+
+  const [isReady, setIsReady] = useState(false);
+  const [currentPage, setCurrentPage] = useState(key - 1);
+
+  const viewabilityConfig = {itemVisiblePercentThreshold: 100};
+  const swiper = useRef<FlatList>(null);
 
   const onViewableItemsChanged: onFlatListViewableItemsChangedArgument<
     void
   > = event => {
     const page = onFlatListViewableItemsChanged(event);
 
-    if (page) {
-      setCurrentPage(currentPage);
+    if (typeof page === 'number') {
+      setCurrentPage(page);
     }
   };
 
