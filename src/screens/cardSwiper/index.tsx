@@ -1,9 +1,5 @@
 import React, {FunctionComponent, useEffect, useRef, useState} from 'react';
-import {
-  View,
-  ViewabilityConfigCallbackPair,
-  ViewabilityConfigCallbackPairs,
-} from 'react-native';
+import {View, ViewabilityConfigCallbackPairs} from 'react-native';
 import styles from './styles';
 import {Menu} from '@ui';
 import {FlatList} from 'react-native-gesture-handler';
@@ -11,6 +7,10 @@ import {CardItem, CardStep} from '@entities';
 import {cards} from '../../tempData/cards';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {RootStackParamList} from '@navigation/stackNavigation/lib';
+import {
+  onFlatListViewableItemsChanged,
+  onFlatListViewableItemsChangedArgument,
+} from '@entities';
 
 const text = `Полюбил бы я зиму,
 Да обуза тяжка...
@@ -29,14 +29,15 @@ const CardSwiper: FunctionComponent<
   const dots = cards.map(item => item.key - 1);
   const {key} = route.params;
 
-  const onViewableItemsChanged: ViewabilityConfigCallbackPair['onViewableItemsChanged'] =
-    event => {
-      const targetElement = event.viewableItems[0]?.index;
+  const onViewableItemsChanged: onFlatListViewableItemsChangedArgument<
+    void
+  > = event => {
+    const page = onFlatListViewableItemsChanged(event);
 
-      if (typeof targetElement === 'number') {
-        setCurrentPage(targetElement);
-      }
-    };
+    if (page) {
+      setCurrentPage(currentPage);
+    }
+  };
 
   const viewabilityConfigCallbackPairs = useRef<ViewabilityConfigCallbackPairs>(
     [{viewabilityConfig, onViewableItemsChanged}],

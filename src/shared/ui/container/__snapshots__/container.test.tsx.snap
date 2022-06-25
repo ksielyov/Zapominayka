@@ -10,6 +10,7 @@ exports[`container should render correctly 1`] = `
       },
       Object {
         "bottom": undefined,
+        "flexDirection": undefined,
         "marginTop": undefined,
         "position": undefined,
         "zIndex": undefined,
