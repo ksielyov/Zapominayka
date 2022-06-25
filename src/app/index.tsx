@@ -5,7 +5,7 @@ import {StackNavigation} from '@navigation';
 import {AppContainer} from './containers';
 
 import codePush from 'react-native-code-push';
-import {useCodePushService} from './lib/useCodePushService';
+import {useCodePushService} from './lib';
 
 const codePushOptions = {checkFrequency: codePush.CheckFrequency.ON_APP_START};
 
