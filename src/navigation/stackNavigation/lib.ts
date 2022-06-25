@@ -1,9 +1,11 @@
 import {StackNavigationProp} from '@react-navigation/stack';
 
 export type RootStackParamList = {
+  Author: undefined;
+  CardPreview: undefined;
+  Card: {key: number};
   Home: undefined;
   Search: undefined;
-  Author: undefined;
 };
 
 export type stackNavigationScreensType = {

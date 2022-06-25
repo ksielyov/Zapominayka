@@ -41,6 +41,7 @@
     "paths": {
       "@screens": ["src/screens"],
       "@navigation/*": ["src/navigation/*"],
+      "@entities": ["src/entities"],
       "@navigation": ["src/navigation"],
       "@fonts": ["src/shared/assets/fonts"],
       "@colors": ["src/shared/colors"],

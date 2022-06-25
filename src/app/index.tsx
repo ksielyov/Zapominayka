@@ -1,25 +1,27 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 import {StatusBar} from 'react-native';
 
-import {SafeAreaProvider} from 'react-native-safe-area-context';
-import {NavigationContainer} from '@react-navigation/native';
 import {StackNavigation} from '@navigation';
+import {AppContainer} from './containers';
+
+import codePush from 'react-native-code-push';
+import {useCodePushService} from './lib';
+
+const codePushOptions = {checkFrequency: codePush.CheckFrequency.ON_APP_START};
 
 const App = () => {
+  useCodePushService();
+
   return (
-    <SafeAreaProvider>
-      <NavigationContainer>
-        <Fragment>
-          <StatusBar
-            translucent
-            backgroundColor={'transparent'}
-            barStyle={'light-content'}
-          />
-          <StackNavigation />
-        </Fragment>
-      </NavigationContainer>
-    </SafeAreaProvider>
+    <AppContainer>
+      <StatusBar
+        translucent
+        backgroundColor={'transparent'}
+        barStyle={'light-content'}
+      />
+      <StackNavigation />
+    </AppContainer>
   );
 };
 
-export default App;
+export default codePush(codePushOptions)(App);

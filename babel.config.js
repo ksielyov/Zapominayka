@@ -8,6 +8,7 @@ module.exports = {
         alias: {
           '@screens': './src/screens',
           '@navigation': './src/navigation',
+          '@entities': './src/entities',
           '@fonts': './src/shared/assets/fonts',
           '@colors': './src/shared/colors',
           '@ui': './src/shared/ui',
