@@ -6,4 +6,5 @@ export default {
   input: '#151625',
   blackBright: '#272727',
   preloadingBright: '#424242',
+  dotGray: '#909090',
 };

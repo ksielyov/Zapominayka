@@ -15,12 +15,14 @@ const Container: FunctionComponent<{
   absolute?: boolean;
   top?: number;
   bottom?: number;
-}> = ({children, zIndex, absolute, top, bottom}) => {
+  rowPosition?: boolean;
+}> = ({children, zIndex, absolute, top, bottom, rowPosition}) => {
   const containerStyles = [
     styles.container,
     {
       zIndex,
       position: absolute ? 'absolute' : undefined,
+      flexDirection: rowPosition ? 'row' : undefined,
       marginTop: top,
       bottom,
     } as ViewStyle,
