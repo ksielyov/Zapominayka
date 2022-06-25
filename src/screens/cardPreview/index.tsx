@@ -5,10 +5,11 @@ import {AppSafeArea, Container, ImageCard, Menu} from '@ui';
 import {verticalScale} from 'react-native-size-matters';
 import {useNavigation} from '@react-navigation/native';
 import {StackPropParamList} from '@navigation/lib';
+import {cards} from '../../tempData/cards';
 
 const CardPreview = () => {
   const navigation = useNavigation<StackPropParamList>();
-  const onCardPress = () => navigation.navigate('Card');
+  const onCardPress = (key: number) => navigation.navigate('Card', {key});
 
   return (
     <ImageBackground
@@ -24,35 +25,15 @@ const CardPreview = () => {
             <Text style={styles.title}>
               Полюбил бы я зиму, да обуза тяжка...
             </Text>
-            <ImageCard
-              onPress={onCardPress}
-              index={1}
-              imageSource={'https://stihi.ru/pics/2018/01/03/10527.jpg'}
-              bottom={verticalScale(10)}
-            />
-            <ImageCard
-              onPress={onCardPress}
-              index={2}
-              imageSource={
-                'https://priioajn.files.wordpress.com/2019/08/landscape-2459981.jpg?w=1200'
-              }
-              bottom={verticalScale(10)}
-            />
-            <ImageCard
-              onPress={onCardPress}
-              index={3}
-              imageSource={
-                'https://i.pinimg.com/736x/29/6c/c0/296cc0b2e55f4c4ef30377b5862b3b2e.jpg'
-              }
-              bottom={verticalScale(10)}
-            />
-            <ImageCard
-              onPress={onCardPress}
-              index={4}
-              imageSource={
-                'https://img5.goodfon.com/wallpaper/big/0/aa/jay-wennington-ulitsa-svet-svetofor.jpg'
-              }
-            />
+            {cards.map(({key, uri}) => (
+              <ImageCard
+                key={key}
+                onPress={() => onCardPress(key)}
+                index={key}
+                imageSource={uri}
+                bottom={verticalScale(10)}
+              />
+            ))}
           </AppSafeArea>
         </ScrollView>
       </Container>
