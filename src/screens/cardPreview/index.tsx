@@ -5,7 +5,7 @@ import {AppSafeArea, Container, ImageCard, Menu} from '@ui';
 import {verticalScale} from 'react-native-size-matters';
 import {useNavigation} from '@react-navigation/native';
 import {StackPropParamList} from '@navigation/lib';
-import {cards} from '../../tempData/cards';
+import {cards} from '../../shared/tempData/cards';
 
 const CardPreview = () => {
   const navigation = useNavigation<StackPropParamList>();
@@ -16,7 +16,7 @@ const CardPreview = () => {
       source={require('@images/background/gray.png')}
       style={styles.container}>
       <Menu />
-      <Container>
+      <Container height={'100%'}>
         <ScrollView
           showsVerticalScrollIndicator={false}
           contentContainerStyle={styles.scrollableContentContainer}
@@ -31,7 +31,7 @@ const CardPreview = () => {
                 onPress={() => onCardPress(key)}
                 index={key}
                 imageSource={uri}
-                bottom={verticalScale(10)}
+                bottom={key !== cards.length ? verticalScale(10) : undefined}
               />
             ))}
           </AppSafeArea>

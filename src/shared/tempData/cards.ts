@@ -8,4 +8,8 @@ export const cards = [
     key: 3,
     uri: 'https://vseogkh.ru/images/articles/full/13151.jpg',
   },
+  {
+    key: 4,
+    uri: 'https://img.youtube.com/vi/9-dE_kNm4Ls/0.jpg',
+  },
 ];

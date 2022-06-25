@@ -18,6 +18,14 @@ export default ScaledSheet.create({
   cardImageContainer: {
     width: '100%',
     height: '56%',
+    backgroundColor: colors.preloadingBright,
+  },
+  preloaderContainer: {
+    position: 'absolute',
+    width: '100%',
+    height: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   cardImage: {
     width: '100%',
@@ -25,15 +33,17 @@ export default ScaledSheet.create({
   },
   numericContainer: {
     width: '36@s',
-    height: '27@vs',
+    height: '29@vs',
     borderTopRightRadius: '8@vs',
     borderTopLeftRadius: '8@vs',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: colors.blackBright,
+    backgroundColor: colors.blackDark,
   },
   numericText: {
     color: colors.white,
+    fontSize: '13.3@vs',
+    fontFamily: fonts.regular,
   },
   textContainer: {
     flex: 1,

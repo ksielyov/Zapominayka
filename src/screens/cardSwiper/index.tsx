@@ -4,7 +4,7 @@ import styles from './styles';
 import {Menu} from '@ui';
 import {FlatList} from 'react-native-gesture-handler';
 import {CardItem, CardStep} from '@entities';
-import {cards} from '../../tempData/cards';
+import {cards} from '../../shared/tempData/cards';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {RootStackParamList} from '@navigation/stackNavigation/lib';
 import {

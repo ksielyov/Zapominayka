@@ -9,6 +9,7 @@ import styles from './styles';
  * @param top
  * @param bottom
  * @param rowPosition
+ * @param height
  * @constructor
  */
 const Container: FunctionComponent<{
@@ -17,7 +18,8 @@ const Container: FunctionComponent<{
   top?: number;
   bottom?: number;
   rowPosition?: boolean;
-}> = ({children, zIndex, absolute, top, bottom, rowPosition}) => {
+  height?: string | number;
+}> = ({children, zIndex, absolute, top, bottom, rowPosition, height}) => {
   const containerStyles = [
     styles.container,
     {
@@ -26,6 +28,7 @@ const Container: FunctionComponent<{
       flexDirection: rowPosition ? 'row' : undefined,
       marginTop: top,
       bottom,
+      height,
     } as ViewStyle,
   ];
   return <View style={containerStyles}>{children}</View>;
